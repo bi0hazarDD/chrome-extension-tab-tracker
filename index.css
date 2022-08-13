@@ -11,14 +11,45 @@ input {
   padding: 10px;
   box-sizing: border-box;
   border: 1px solid #5f9341;
+  border-radius: 3px;
 }
 
-button {
+div {
+  width: 400px;
+}
+
+div.wordWrap {
+  word-wrap: break-word;
+}
+
+div.break {
+  border: 0.5px solid #c0c0c0;
+  border-radius: 100px;
+  width: 100%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: auto;
+}
+
+a:hover {
+  color: #00a2ff;
+}
+.button:hover {
+  background: white;
+  color: #5f9341;
+}
+#delete-btn:hover {
+  background: rgb(255, 25, 25);
+  color: white;
+}
+.button {
   background: #5f9341;
   color: white;
   font-weight: bold;
   padding: 10px 20px;
   border: 1px solid #5f9341;
+  cursor: pointer;
+  border-radius: 100px;
 }
 
 #delete-btn {

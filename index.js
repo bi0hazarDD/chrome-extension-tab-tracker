@@ -20,6 +20,7 @@ function render(leads) {
           ${leads[i]}
         </a>
       </li>
+      <div class='break'></div>
       `
     // const li = document.createElement("li")
     // li.textContent = myLeads[i]
