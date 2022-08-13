@@ -10,7 +10,7 @@ if (leadsFromLocalStorage) {
   myLeads = leadsFromLocalStorage
   render(myLeads)
 }
-
+// Reusable render function
 function render(leads) {
   let listItems = ""
   for (let i = 0; i < leads.length; i++) {
