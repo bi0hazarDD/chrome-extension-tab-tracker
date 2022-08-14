@@ -32,7 +32,6 @@ function render(leads) {
 
 tabBtn.addEventListener("click", function () {
   chrome.tabs.query({ active: true, currentWindow: true }, function (tabs) {
-    console.log(tabs[0].url)
     myLeads.push(tabs[0].url)
     localStorage.setItem("myLeads", JSON.stringify(myLeads))
     render(myLeads)
@@ -45,11 +44,15 @@ deleteBtn.addEventListener("dblclick", function () {
 })
 
 inputBtn.addEventListener("click", function () {
-  myLeads.push(inputEl.value)
-  inputEl.value = ""
-  // Save the myLeads array to localStorage
-  // Note: localStorage only supports strings
-  const myLeadsString = JSON.stringify(myLeads)
-  localStorage.setItem("myLeads", myLeadsString)
-  render(myLeads)
+  inputEl.value = inputEl.value.trim()
+  if (inputEl.value !== "") {
+    myLeads.push(inputEl.value)
+    inputEl.value = ""
+    // Save the myLeads array to localStorage
+    // Note: localStorage only supports strings
+    const myLeadsString = JSON.stringify(myLeads)
+    localStorage.setItem("myLeads", myLeadsString)
+    render(myLeads)
+  }
+  console.log(myLeads)
 })
