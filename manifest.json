@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "version": "1.2",
-  "name": "Leads Tracker",
+  "name": "Tab Tracker",
   "permissions": ["tabs"],
   "description": "Need to quickly save that tab? Leads Tracker is a useful tool that saves your current tab URL all in one place, saving hours",
   "action": {
